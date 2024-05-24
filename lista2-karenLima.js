@@ -113,3 +113,145 @@ const prompt = require('prompt-sync')();
 
 
 //Exercicio 6
+//  const max = 5;
+//  const min = 1;
+
+// let  numeroAleatorio = Math.floor(Math.random() *(max-min + 1)+min);
+// let adivinhacao = parseInt(prompt('Insira um número entre 1 e 5: '));
+// achaNumeroAleatorio(adivinhacao);
+
+// function achaNumeroAleatorio(adivinhacao){
+//   while(adivinhacao != numeroAleatorio){
+//     if(adivinhacao < numeroAleatorio){
+//       console.log('O valor é maior!');
+//       adivinhacao = parseInt(prompt('Insira um número entre 1 e 5: '));
+//     }else{
+//       console.log('O valor é menor');
+//       adivinhacao = parseInt(prompt('Insira um número entre 1 e 5: '));
+//     }
+//   }
+
+//   console.log(`Parabens! Você acertou, o número é ${numeroAleatorio}`)
+// }
+
+
+//Exercicio 7
+
+// console.log('Tipos de Carro:\n 1-Popular\n 2-Luxo');
+// let tipoDeCarro = parseInt(prompt('Insira o numero correspondente ao tipo de carro: '));
+// let diasDeAluguel = parseInt(prompt('Insira a quantidade em dias de aluguel: '));
+// let kmPercorridos = parseFloat(prompt('Insira a quantidade percorrida em Km: '));
+
+// console.log(`O Preço a ser pago é de R$ ${calculaPreco(kmPercorridos, tipoDeCarro,diasDeAluguel)}`)
+
+// function calculaPreco(distancia, tipoDeVeiculo,diasAlugado){
+// let preco = 0;
+//   switch(tipoDeVeiculo){
+//     case 1:
+//       if(distancia <= 100 ){
+//         preco = 90 + (distancia * 0.2)*diasAlugado;
+//       }else{
+//         preco = 90 + (distancia * 0.10)*diasAlugado;
+//       }
+//       break;
+//     case 2:
+//       if(distancia <= 200){
+//         preco = 150 + (distancia *0.30)*diasAlugado;
+//       }else{
+//         preco =150 + (distancia *0.25)*diasAlugado;
+//       }
+//       break;
+//   }
+//   return preco.toFixed(2);
+// }
+
+//Exercicio 8
+
+// let horasDeAtividadePorMes = parseFloat(prompt('Insira a quantidade em horas de atividades feitas por mês: '));
+// calculaValorRecebido(horasDeAtividadePorMes);
+
+// function calculaPontos(horasAtividades){
+//   let pontosAcumulados =0;
+//   if(horasAtividades <= 10){
+//     pontosAcumulados = 2* horasAtividades;
+//   }else if (horasAtividades >10 && horasAtividades <= 20){
+//     pontosAcumulados = 5* horasAtividades;
+//   }else{
+//     pontosAcumulados = 10*horasAtividades;
+//   }
+//   return pontosAcumulados;
+// }
+
+// function calculaValorRecebido(horas){
+//   let pontosAcumulados = calculaPontos(horas);
+//   let valorAGanhar  = pontosAcumulados * 0.05;
+
+//   console.log(`O total de pontos acumulados no mês é: ${pontosAcumulados}\n O valor Recebido será de: R$ ${valorAGanhar.toFixed(2)} reais.`)
+// }
+
+
+//Exercicio 9
+
+// let funcionarios =[];
+// let continuar = 1;
+
+// function calcularSalarioPorSexo(array){
+//   let resultado = [];
+//   let totalHomens =0;
+//   let totalMulheres =0;
+//   for(let funcionario of array){
+//     if(funcionario[0]==1){
+//       totalHomens+= funcionario[1];
+//     }else{
+//       totalMulheres+=funcionario[1];
+//     }
+//   }
+
+//   resultado.push(totalHomens);
+//   resultado.push(totalMulheres);
+//   return resultado
+// }
+
+// while(continuar!= 0){
+//   let sexoFuncionario = parseInt(prompt('Digite o sexo do funcionário. 1-Masculino 2-Feminino: '));
+//   let salarioFuncionario =parseFloat(prompt('Digite o salario do funcionário: '));
+//   let funcionario = [sexoFuncionario, salarioFuncionario];
+
+//   funcionarios.push(funcionario);
+//   continuar = parseInt(prompt('Deseja continuar? 1-Sim 0- Não: '));
+// }
+
+// let resultado = calcularSalarioPorSexo(funcionarios);
+// console.log(`O Salário total dos homens: ${resultado[0].toFixed(2)}.\nO salário total das mulheres: ${resultado[1].toFixed(2)}.`);
+
+
+//Exercicio 10
+
+// let continuar = 1;
+// let pares =0;
+// let soma =0;
+// let valores = [];
+// while(continuar != 0){
+//   let valor =parseInt(prompt('Insira um valor: '));
+//   soma += valor;
+//   if(valor %2 == 0){
+//     pares += 1;
+//   }
+//   valores.push(valor);
+//   continuar = parseInt(prompt('Deseja continuar? 1-Sim e 0-Não: '));
+// }
+
+// function achaMenorValor(array){
+//   let menor = array[0];
+//   for(let elemento of array){
+//     if(elemento<menor){
+//       menor = elemento;
+//     }
+//   }
+//   return menor;
+// }
+
+// console.log(`A soma dos valores é: ${soma}.`);
+// console.log(`O menor valor digitado foi ${achaMenorValor(valores)}.`);
+// console.log(`A média dos valores é  ${(soma/valores.length).toFixed(2)}.`);
+// console.log(`A quantidade de números pares é ${pares}.`);
