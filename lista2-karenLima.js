@@ -255,3 +255,102 @@ const prompt = require('prompt-sync')();
 // console.log(`O menor valor digitado foi ${achaMenorValor(valores)}.`);
 // console.log(`A média dos valores é  ${(soma/valores.length).toFixed(2)}.`);
 // console.log(`A quantidade de números pares é ${pares}.`);
+
+
+//Exercicio 11
+
+//an = a1 + (n-1)*r
+//Sn = (a1+an)*n/2
+
+// let a1 = parseInt(prompt('Insira o valor do primeiro tremo da P.A.: '));
+// let r = parseInt(prompt("Insira a razão da P.A.: "));
+// let n =10;
+
+// let an = 0;
+// let Sn = 0;
+// for(let i=1; i<=n; i++){
+//     an = a1 + (i-1)*r;
+//     console.log(`a${i}: ${an}`);
+// }
+// Sn = ((a1 + an)*n)/2;
+
+// console.log(`O somatório é: ${Sn}`);
+
+
+//Exercício 12
+
+// let f1 =1;
+// let n = 10;
+// let fibonacci = [];
+// for(let i=1; i<=n; i++){
+//     let fn;
+//     let ultimoElemento = fibonacci.length-1!=-1?fibonacci.length-1:0;
+//     let penultimoElemento = fibonacci.length-2;
+//     if(fibonacci.length-2==-2 || fibonacci.length-2 ==-1){
+//         penultimoElemento = -4;
+//     }
+//     if(ultimoElemento==0 && penultimoElemento==-4){
+//         fn = f1;
+//     }else{
+//         fn = fibonacci[ultimoElemento] + fibonacci[penultimoElemento];
+//     }
+//     console.log(`f${i}: ${fn}`);
+//     fibonacci.push(fn);
+// }
+
+
+
+//Exercicio 13
+
+// let f1 = 1;
+// let n = 15;
+// let fibonacci = [];
+// for(let i=1; i<=n; i++){
+//     let fn;
+//     let ultimoElemento = fibonacci.length-1!=-1?fibonacci.length-1:0;
+//     let penultimoElemento = fibonacci.length-2;
+//     if(fibonacci.length-2==-2 || fibonacci.length-2 ==-1){
+//         penultimoElemento = -4;
+//     }
+//     if(ultimoElemento==0 && penultimoElemento==-4){
+//         fn = f1;
+//     }else{
+//         fn = fibonacci[ultimoElemento] + fibonacci[penultimoElemento];
+//     }
+//     fibonacci.push(fn);
+// }
+
+// console.log(fibonacci);
+
+//Exercico 14
+
+// let nomes=[];
+// let tamanho = 7
+// for(let i=1; i<=tamanho; i++){
+//     let nome = prompt('Digite um nome: ');
+//     nomes.push(nome);
+// }
+
+// imprimeNomes(nomes);
+// function imprimeNomes(array){
+//     for(let i=tamanho-1; i>=0;i--){
+//         console.log(nomes[i]);
+//     }
+// }
+
+
+//Exercicio 15
+
+// let numeros = [];
+
+// for(let i=1; i<=10;i++){
+//     let numero = parseInt(prompt('Insira um numero: '));
+//     numeros.push(numero);
+// }
+
+// for(let i=0; i<=numeros.length;i++){
+//     if(numeros[i]%2 == 0){
+//         console.log(`O numero ${numeros[i]} é par e está na posição ${i}`);
+//     }
+// }
+
