@@ -1,5 +1,7 @@
 const prompt = require('prompt-sync')();
 
+//Refazer: 16,19,20
+
 //Exercício 1
 // let quantidadeCigarrosPorDia = parseFloat(prompt('Insira quantos cigarros você fuma por dia: '));
 // let anosFumando = parseFloat(prompt('Insira quantos anos você já fumou: '));
@@ -353,4 +355,287 @@ const prompt = require('prompt-sync')();
 //         console.log(`O numero ${numeros[i]} é par e está na posição ${i}`);
 //     }
 // }
+
+
+//Exercicio 16
+
+//  const max = 0;
+//  const min = 99;
+//  let numeros =[];
+
+//  for(let i=1; i<=20;i++){
+//     let  numeroAleatorio = Math.floor(Math.random() *(max-min + 1)+min);
+//     numeros.push(numeroAleatorio);
+//  }
+// console.log(`O vetor gerado é [${numeros}]`);
+
+// let numerosOrdenados=[];
+
+// for(let i=0; i<=numeros.length;i++){
+//     let elemento = numeros[i];
+   
+//     for(let j=1; j<20;j++){
+//         if(numeros[j]<elemento){
+//             elemento = numeros[j];
+//             numeros[j] = elemento;
+//              console.log(elemento);
+//         }
+//     }
+    
+//     numerosOrdenados[i] = elemento;
+// }
+
+// console.log(`O vetor ordenado é [${numerosOrdenados}]`);
+
+
+//Exercíco 17
+
+// let nomes = [];
+// let idades = [];
+
+// for(let i=1; i<=9;i++){
+//     let nome = prompt('Insira um nome: ');
+//     nomes.push(nome);
+//     let idade = parseInt(prompt('Insira uma idade: '));
+//     idades.push(idade);
+// }
+
+// console.log('Lista dos menores de idade: ')
+// for(let i=0; i<9;i++){
+//     if(idades[i]<18){
+//         console.log(`${nomes[i]} tem ${idades[i]} anos de idade.`);
+//     }
+// }
+
+
+//Exercicio 18
+
+// let registroFuncionario = {
+//     nome: "",
+//     cargo: "",
+//     salario: 0
+// }
+
+// console.log(`Esse é o registro: {nome: ${registroFuncionario.nome}, cargo: ${registroFuncionario.cargo}, salário: ${registroFuncionario.salario}}`);
+// let nomeFuncionario = prompt('Insira o nome do funcionário: ');
+// let cargoFuncionário = prompt('Insira o cargo do funcionário: ');
+// let salarioFuncionario = parseFloat(prompt('Insira o salio do funcionario: '));
+
+// registroFuncionario.nome = nomeFuncionario;
+// registroFuncionario.cargo = cargoFuncionário;
+// registroFuncionario.salario = salarioFuncionario;
+
+// console.log(`Esse é o registro: {nome: ${registroFuncionario.nome}, cargo: ${registroFuncionario.cargo}, salário: ${registroFuncionario.salario}}`);
+
+
+//Exercicio 19
+
+
+
+//Exercicio 20
+
+// let funcionario = {
+//     matricula: "",
+//     nome: "",
+//     salarioBruto: 0,
+//     deducaoINSS: 0,
+//     salárioLiquido: 0
+// }
+// console.log(funcionario[1]);
+
+// for(let campo in funcionario){
+//     if(campo.valueOf()==""){
+//         let valor = prompt(`Insira ${campo} do funcionário: `);
+//         campo = valor;
+//     }else if(campo.localeCompare("salarioBruto")){
+//         let valor = parseFloat(prompt(`Insira ${campo} do funcinario: `));
+//         campo = valor;
+//     }else if(campo.localeCompare("deducaoINSS")){
+//         campo = funcionario.salarioBruto * 0.12;
+//     }else{
+//         campo = funcionario.salarioBruto - funcionario.deducaoINSS;
+//     }
+       
+// }
+
+// console.log(funcionario);
+
+
+//Exercicio 21
+
+// console.log(pesoIdeal(1.74, "M"));
+// console.log(pesoIdeal(1.68, "F"));
+
+// function pesoIdeal(altura, sexo){
+//     let pesoIdeal =0;
+//     if(sexo == "m" || sexo=="M"){
+//         pesoIdeal = (72.7*altura) - 58;
+//     }else if(sexo=="f" || sexo == "F"){
+//         pesoIdeal = (62.1 * altura) - 44.7;
+//     }
+
+//     return pesoIdeal.toFixed(1);
+// }
+
+
+//Exercicio 22
+
+// let continuar =1;
+// let numPessoas = 0;
+// let quantidadeDeFilhos =0;
+// let somatorioSalario = 0;
+// let salarios = [];
+
+// while(continuar!= 0){
+//     numPessoas +=1
+//     let numeroDeFilhos = parseInt(prompt('Insira o numero de filhos: '));
+//     quantidadeDeFilhos += numeroDeFilhos;
+//     let salario = parseFloat(prompt('Insira o salario: '));
+//     somatorioSalario += salario;
+//     salarios.push(salario);
+//     continuar = parseInt(prompt('Deseja continuar? 1-Sim, 0-Não: '));
+
+// }
+
+// analiandoDados(numPessoas,somatorioSalario,quantidadeDeFilhos,salarios);
+
+// function AchaMaiorSalario(array){
+//     let maior = 0;
+//     for(let salario of array){
+//         if(salario> maior){
+//             maior = salario;
+//         } 
+//     }
+//     return maior;
+// }
+
+// function analiandoDados(numeroDePessoas, SomatorioDoSalario,SomatorioDeFilhos,salarios){
+//     let mediaDeSalario = SomatorioDoSalario / numeroDePessoas;
+//     let mediaDeFilhos = SomatorioDeFilhos / numeroDePessoas;
+//     let maiorSalario = AchaMaiorSalario(salarios);
+//     let salarioIgual350 = 0;
+//     for(let salario of salarios){
+//         if(salario<= 350){
+//             salarioIgual350 += 1;
+//         }
+//     }
+//     let percentualAte350 = (salarioIgual350/numeroDePessoas) *100;
+
+//     console.log(`A média Salarial é R$ ${mediaDeSalario.toFixed(2)} reais`);
+//     console.log(`A média de filhos é ${mediaDeFilhos.toFixed(1)}`);
+//     console.log(`O maior salário é R$ ${maiorSalario.toFixed(2)} reais`);
+//     console.log(`O percentual de pessoas que ganham até 350 é ${percentualAte350.toFixed(1)}%`);
+
+// }
+
+//Exercicio 23
+
+// function criarMatrizIdentidade(n) {
+//   const matriz = [];
+
+//   for (let i = 0; i < n; i++) {
+//     matriz[i] = new Array(n).fill(0);
+//   }
+
+//   for (let i = 0; i < n; i++) {
+//     matriz[i][i] = 1;
+//   }
+
+//   return matriz;
+// }
+
+// const matrizIdentidade = criarMatrizIdentidade(7);
+
+// const linhas = matrizIdentidade.map(linha => linha.join(' '));
+// const matrizString = linhas.join('\n');
+// console.log(matrizString);
+
+
+//Exercicio 24
+
+// function contarNegativosPorLinha(matriz) {
+//     const contagensNegativos = new Array(matriz.length).fill(0);
+  
+//     for (let i = 0; i < matriz.length; i++) {
+//       let contagemNegativos = 0;
+//       for (let j = 0; j < matriz[i].length; j++) {
+//         if (matriz[i][j] < 0) {
+//           contagemNegativos++;
+//         }
+//       }
+  
+//       contagensNegativos[i] = contagemNegativos;
+//     }
+  
+//     return contage
+//   nsNegativos;
+//   }
+  
+//   const matriz = [
+//     [-1, 2, 0, 4],
+//     [3, -5, 1],
+//     [0, -2, 7, -1],
+//     [4, 0, 6],
+//     [-3, 1, 5],
+//     [2, -4, 0],
+//   ];
+  
+//   const contagensNegativos = contarNegativosPorLinha(matriz);
+//   console.log(contagensNegativos); 
+
+
+
+//Exercicio 25
+
+//   function calcularSomaColunas(matriz) {
+//     const colunas = matriz[0].length; 
+//     const somaColunas = new Array(colunas).fill(0); 
+//   a
+//     for (let i = 0; i < matriz.length; i++) {
+//       for (let j = 0; j < colunas; j++) {
+//         somaColunas[j] += matriz[i][j];
+//       }
+//     }
+  
+//     return somaColunas;
+//   }
+  
+//   const matriz = [
+//         [-1, 2, 0, 4,0,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1],
+//         [3, -5, 1, 0,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [0, -2, 7,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [4, 0, 6,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [-3, 1,5,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [2, -4, 0,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [-1, 2, 0, 4,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1],
+//         [3, -5, 1, -1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [0, -2, 7, -1,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1],
+//         [4, 0, 6, -1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [-3, 1, 5,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [2, -4, 0,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [4, 0, 6,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [-3, 1, 5,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//         [2, -4, 0,-1,5,7,8,9,1,2,3,5,0,0,0,0,0,2,1,5],
+//       ];
+
+//   const somaColunas = calcularSomaColunas(matriz);
+  
+//   console.log("Soma de cada coluna:");
+//   for (let i = 0; i < 20; i++) {
+//     console.log(`Coluna ${i + 1}: ${somaColunas[i]}`);
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
