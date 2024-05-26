@@ -590,10 +590,10 @@ const prompt = require('prompt-sync')();
 //   function calcularSomaColunas(matriz) {
 //     const colunas = matriz[0].length; 
 //     const somaColunas = new Array(colunas).fill(0); 
-//   a
-//     for (let i = 0; i < matriz.length; i++) {
-//       for (let j = 0; j < colunas; j++) {
-//         somaColunas[j] += matriz[i][j];
+  
+//     for (let j = 0; j < colunas; j++) { // Percorrer cada coluna
+//     for (let i = 0; i < matriz.length; i++) { // Percorrer cada linha da coluna atual
+//         somaColunas[j] += matriz[i][j]; // Somar o valor na coluna atual
 //       }
 //     }
   
