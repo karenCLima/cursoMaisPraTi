@@ -591,9 +591,9 @@ const prompt = require('prompt-sync')();
 //     const colunas = matriz[0].length; 
 //     const somaColunas = new Array(colunas).fill(0); 
   
-//     for (let j = 0; j < colunas; j++) { // Percorrer cada coluna
-//     for (let i = 0; i < matriz.length; i++) { // Percorrer cada linha da coluna atual
-//         somaColunas[j] += matriz[i][j]; // Somar o valor na coluna atual
+//     for (let j = 0; j < colunas; j++) { 
+//     for (let i = 0; i < matriz.length; i++) { 
+//         somaColunas[j] += matriz[i][j]; 
 //       }
 //     }
   
@@ -624,6 +624,292 @@ const prompt = require('prompt-sync')();
 //   for (let i = 0; i < 20; i++) {
 //     console.log(`Coluna ${i + 1}: ${somaColunas[i]}`);
 //   }
+
+
+//Exercicio 26
+// Para calcular o produto de duas matrizes numéricas A e B no JavaScript, você precisa garantir que a multiplicação de matrizes está correta. No entanto, dado que as matrizes A e B têm as mesmas dimensões (3x5), a multiplicação de matrizes conforme a definição matemática não seria aplicável diretamente. Em vez disso, estou assumindo que você deseja calcular o produto elemento por elemento, resultando em uma matriz P onde cada elemento é o produto de cada elemento da matriz A com a Matriz B.
+
+// function criaMatrizProduto(matrizA,matrizB){
+//     let matrizProduto = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+//     let produto = 0;
+//     for(let i=0; i<matrizA.length; i++){
+//         for(let j=0; j<matrizB[0].length;j++){
+//             matrizProduto[i][j] = matrizA[i][j] * matrizB[i][j];
+//         }
+//     }
+
+//     return matrizProduto;
+// }
+
+// const matrizA = [
+//     [1,1,1,1,1],
+//     [1,1,1,1,1],
+//     [1,1,1,1,1]
+// ];
+
+// const matrizB = [
+//     [1,2,1,0,1],
+//     [1,1,1,1,1],
+//     [0,0,0,1,1]
+// ];
+
+// const matrizProduto = criaMatrizProduto(matrizA,matrizB);
+// const linhas = matrizProduto.map(linha => linha.join(' '));
+// const matrizString = linhas.join('\n');
+// console.log(matrizString);
+
+//Exercicio 27
+
+// function acharVetorV(matriz,numero){
+//     const vetorV = new Array(36).fill(0);
+//     let cont = 0;
+//     for (let j = 0; j < matriz.length; j++) { 
+//         for (let i = 0; i < matriz.length; i++) { 
+//             vetorV[cont] = matriz[j][i] * numero; 
+//             cont++;
+//         }
+//     }
+
+//     return vetorV;
+// }
+
+// const matriz = [
+//     [1,2,1,0,1,1],
+//     [1,1,1,1,1,0],
+//     [0,0,0,1,1,1],
+//     [1,2,1,0,1,1],
+//     [1,1,1,1,1,0],
+//     [0,0,0,1,1,1],
+// ];
+
+// let numero = 2;
+
+// const vetorV = acharVetorV(matriz, numero);
+// console.log(vetorV);
+
+
+//Exercicio 28
+
+// function somaAcimaDiagonal(matriz){
+//     let soma = 0;
+//     for(let i=0; i<matriz.length;i++){
+//         for(let j=0; j<matriz[i].length; j++){
+//             if(j>i){
+//                 soma += matriz[i][j];
+//             }
+//         }
+//     }
+
+//     return soma;
+// }
+
+// function somaAbaixoDiagonal(matriz){
+//     let soma = 0;
+//     for(let i=0; i<matriz.length;i++){
+//         for(let j=0; j<matriz[i].length; j++){
+//             if(j<i){
+//                 soma += matriz[i][j];
+//             }
+//         }
+//     }
+
+//     return soma;
+// }
+
+// const matriz = [
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0],
+//     [2, 1, 0, 1, 1, 0, 0, 1, 0,0]
+// ];
+
+// let somaAcimaDiagonalPrincipal = somaAcimaDiagonal(matriz);
+// let somaAbaixoDiagonalPrincipal = somaAbaixoDiagonal(matriz);
+
+// console.log(`A soma dos valores acima da diagonal principal é ${somaAcimaDiagonalPrincipal}`);
+// console.log(`A soma dos valores abaixo da diagonal principal é ${somaAbaixoDiagonalPrincipal}`);
+
+
+//Exercício 29
+
+// const matriz = [
+//     [1,1,1,1,1],
+//     [0,0,0,0,0],
+//     [1,0,1,0,1],
+//     [1,1,1,1,1],
+//     [0,0,0,0,0]
+// ];
+
+// let somaLinha4 =0;
+// let somaColuna2 =0;
+// let somaDiagonalPrincipal = 0;
+// let somaTodosElementos = 0;
+
+// for(let i=0; i<matriz.length;i++){
+//     for(let j=0; j<matriz[i].length; j++){
+//        somaTodosElementos += matriz[i][j];
+//        if(i==3){
+//         somaLinha4 += matriz[i][j];
+//        }
+//        if(j==1){
+//         somaColuna2 += matriz[i][j];
+//        }
+//        if(i==j){
+//         somaDiagonalPrincipal += matriz[i][j];
+//        }
+//     }
+// }
+
+// console.log(`O somatório da linha 4 é: ${somaLinha4}`);
+// console.log(`O somatório da coluna 2 é: ${somaColuna2}`);
+// console.log(`O somatório da diagonal principal é: ${somaDiagonalPrincipal}`);
+// console.log(`O somatório de todos os elemntos é: ${somaTodosElementos}`);
+
+
+//Exercício 30
+
+// const matriz = [
+//     [1,1,1,1,1],
+//     [0,0,0,0,0],
+//     [1,0,1,0,1],
+//     [1,1,1,1,1],
+//     [0,0,0,0,0]
+// ];
+
+// let somaLinha =[0,0,0,0,0];
+// let somaColuna =[0,0,0,0,0];
+
+// for(let i=0; i<matriz.length;i++){
+//     for(let j=0; j<matriz[i].length; j++){
+//        somaLinha[i] += matriz[i][j];
+//        somaColuna[i] += matriz[j][i];
+//     }
+// }
+
+// console.log('A matriz (5,5):')
+// console.log(matriz);
+// console.log('O vetor soma linha: ')
+// console.log(somaLinha);
+// console.log('O vetor soma coluna: ');
+// console.log(somaColuna);
+
+
+//Exercício 31
+
+// const matriz = [];
+// const max = 5;
+// const min = 0;
+
+// function geraMatriz(matriz, max,min){
+//     for(let j=0; j< 30; j++){
+//         const submatriz = new Array(30).fill(0);
+//         for(let i=0; i<submatriz.length;i++){
+//             submatriz[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//         }
+//         matriz.push(submatriz);
+//     }
+//     return matriz;
+// }
+
+// console.log('A matriz gerada é: ')
+// const matrizGerada = geraMatriz(matriz, max,min);
+// const linhas = matrizGerada.map(linha => linha.join(' '));
+// const matrizString = linhas.join('\n');
+// console.log(matrizString);
+
+
+// function achaValoresNaMatriz(matriz, valor){
+//     let soma = 0;
+//     for(let j=0; j< matriz.length; j++){
+//         for(let i=0; i<matriz[j].length;i++){
+//             if(matriz[i][j] == valor){
+//                 soma += 1;
+//             }
+//         }
+//     } 
+
+//     return soma;
+// }
+
+// function retornaMatrizX(matriz, valor){
+//     const matrizX = [];
+    
+//     for (const subarray of matriz) {
+//         const subarrayMatrizX = subarray.filter(element => element !== valor);
+//         matrizX.push(subarrayMatrizX);
+//     }
+
+//     return matrizX;
+// }
+
+// let valor = 1;
+// const matrizX = retornaMatrizX(matrizGerada, valor);
+
+// console.log(`Existem na matriz  ${achaValoresNaMatriz(matrizGerada,valor)} elementos iguais ao valor ${valor}`);
+// console.log('A matriz X é : ');
+// const linhasX = matrizX.map(linha => linha.join(' '));
+// const matrizStringX = linhasX.join('\n');
+// console.log(matrizStringX);
+
+
+//Exercício 32
+
+// const matriz = [];
+// const max = 5;
+// const min = -4;
+
+// function geraMatriz(matriz, max,min){
+//     for(let j=0; j< 12; j++){
+//         const submatriz = new Array(13).fill(0);
+//         for(let i=0; i<submatriz.length;i++){
+//             submatriz[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//         }
+//         matriz.push(submatriz);
+//     }
+//     return matriz;
+// }
+
+// console.log('A matriz gerada é: ')
+// const matrizGerada = geraMatriz(matriz, max,min);
+// const linhas = matrizGerada.map(linha => linha.join(' '));
+// const matrizString = linhas.join('\n');
+// console.log(matrizString);
+
+// function achaMaiorValor(array){
+//     let maior =-10000; 
+//     for(let i=0; i<array.length;i++){
+//         if(Math.abs(array[i])> maior){
+//             maior = array[i];
+//         }
+//     }
+
+//     return maior === 0 ? 1 : maior;
+// }
+
+// function retornaMatrizComDivisao(matriz){
+//     const matrizComDivisão =[];
+    
+//     for(let i=0; i<matriz.length;i++){
+//         matrizComDivisão[i] = [];
+//         for(let j=0; j<matriz[i].length; j++){
+//             matrizComDivisão[i][j] = (matriz[i][j]/achaMaiorValor(matriz[i])).toFixed(1);
+//         }
+//     }
+
+//     return matrizComDivisão;
+// }
+
+// const matrizDividida = retornaMatrizComDivisao(matrizGerada);
+// console.log('A matriz com Divisão é : ');
+// const linhasD = matrizDividida.map(linha => linha.join(' '));
+// const matrizStringD = linhasD.join('\n');
+// console.log(matrizStringD);
 
 
 
