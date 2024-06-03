@@ -912,6 +912,433 @@ const prompt = require('prompt-sync')();
 // console.log(matrizStringD);
 
 
+//Exercicio 33
+
+// const matriz = [
+//     [1,0,2],
+//     [2,2,1],
+//     [2,2,4]
+// ];
+
+// function mediaDiagonalSecundaria(matriz){
+//     let soma = 0;
+//     for(let i=0; i<matriz.length; i++){
+//         for(let j=0; j<matriz[i].length; j++){
+//             if((i==0 && j==2) || (i==1 && j==1) || (i==2 && j==0)){
+//                 soma +=  matriz[i][j];
+//             }
+//         }
+//     }
+
+//     return soma/3;
+// }
+
+// function multiplicaDiagonalPrincipal(matriz){
+//     let media = mediaDiagonalSecundaria(matriz);
+//     for(let i=0; i<matriz.length; i++){
+//         for(let j=0; j<matriz[i].length; j++){
+//             if(i==j){
+//                 matriz[i][j] = matriz[i][j] * media;
+//             }
+//         }
+//     }
+
+//     return matriz;
+// }
+
+// console.log('Matriz original: ');
+// console.log(matriz);
+// const matrizTransformada = multiplicaDiagonalPrincipal(matriz);
+// console.log('Matriz Transformada: ');
+// console.log(matrizTransformada);
+
+
+//Exercício 34
+
+// const matriz = [];
+// const max = 5;
+// const min = 0;
+
+// function geraMatriz(matriz, max,min){
+//     for(let j=0; j< 50; j++){
+//         const submatriz = new Array(50).fill(0);
+//         for(let i=0; i<submatriz.length;i++){
+//             submatriz[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//         }
+//         matriz.push(submatriz);
+//     }
+//     return matriz;
+// }
+
+// console.log('A matriz gerada é: ')
+// const matrizGerada = geraMatriz(matriz, max,min);
+// const linhas = matrizGerada.map(linha => linha.join(' '));
+// const matrizString = linhas.join('\n');
+// console.log(matrizString);
+
+// function multiplicaLinhaPorElementoDaDiagonal(matriz){
+//     for(let i=0; i<matriz.length;i++){
+//         let elementoDaDiagonal = matriz[i][i];
+//         for(let j=0; j<matriz[i].length;j++){
+//             matriz[i][j] = matriz[i][j] *elementoDaDiagonal;
+//         }
+//     }
+
+//     return matriz;
+// }
+
+// console.log('A matriz Transformada é: ')
+// const matrizTransformada = multiplicaLinhaPorElementoDaDiagonal(matrizGerada);
+// const linhasT = matrizGerada.map(linha => linha.join(' '));
+// const matrizStringT = linhasT.join('\n');
+// console.log(matrizStringT);
+
+
+//Exercico 35
+
+// const vetor =[]
+// const max = 5;
+// const min = 0;
+
+// function geraVetor(max,min,vetor){
+//     for(let j=0; j<30; j++){
+//         vetor = new Array(30).fill(0);
+//     }
+
+//     for(let i=0; i<vetor.length;i++){
+//         vetor[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//     }
+//     return vetor;
+// }
+
+// console.log('O vetor gerado é: ')
+// const vetorGerado = geraVetor(max,min,vetor);
+// console.log(vetorGerado);
+
+// function imprimeParEImpar(vetor){
+//     let pares =[];
+//     let impares =[];
+//     for(let elemento of vetor){
+//         if(elemento%2==0){
+//             pares.push(elemento);
+//             if(pares.length == 5){
+//                 console.log(`Esses são pares: ${pares}`);
+//                 pares = [];
+//             }
+//         }else{
+//             impares.push(elemento);
+//             if(impares.length==5){
+//                 console.log(`Esses são Ímpares: ${impares}`);
+//                 impares = [];
+//             }
+//         }
+        
+//     }
+
+//     console.log(`Esses são pares: ${pares}`);
+//     console.log(`Esses são Ímpares: ${impares}`);
+// }
+
+// console.log("Esses são os numeros pares e ímpares: ");
+// imprimeParEImpar(vetorGerado);
+
+
+//exercicio 36
+// const max=10;
+// const min = 0;
+
+// function geraVetorResposta(max, min){
+
+//     let vetor = new Array(13).fill(0);
+
+        
+//     for(let i=0; i<vetor.length;i++){
+//         vetor[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//     }
+            
+//     return vetor;
+// }
+
+// const gabarito = geraVetorResposta(max,min);
+// console.log('O  gabarito é: ');
+// console.log(gabarito);
+
+// const apostadores = new Array(100).fill(0);
+
+// function geraApostadores(max,min, apostadores){
+//     for(let i=0; i<100;i++){
+//         let apostador = new Array(2).fill(0);
+//         let respostas = new Array(13).fill(0);
+//         apostador[0] = i+1;
+//         apostador[1] = respostas
+        
+//         for(let j=0; j<13;j++){
+        
+//             apostador[1][j] = Math.floor(Math.random() *(max-min + 1)+min);
+        
+//         }
+
+//         apostadores[i] = apostador;
+//     }
+
+//     return apostadores
+    
+// }
+
+// console.log('A lista de apostadores: ')
+// const listaDeApostadores = geraApostadores(max, min, apostadores);
+// listaDeApostadores.forEach(element => {
+//     console.log(element);
+// });
+
+// function verificaAcertos(gabarito, listaApostadores){
+//     for(let apostador of listaApostadores ){
+//         let acertos = 0;
+//         for(let i=0; i<gabarito.length;i++){
+//             if(apostador[1][i]==gabarito[i]){
+//                 acertos++;
+//             }
+//         }
+
+//         console.log(`O apostador ${apostador[0]} acertou ${acertos} resultados`)
+
+//         if(acertos == 13){
+//             console.log('Parabéns, tu foi o GANHADOR !')
+//         }
+
+//     }
+// }
+
+// verificaAcertos(gabarito, listaDeApostadores);
+
+
+//Exercicio 37
+// const letras= ['A','B', 'C', 'D', 'E'];
+// const max = 4;
+// const min = 0;
+
+// function geraVetorResposta(max, min, vetorLetras){
+    
+//     let vetor = new Array(20).fill(0);
+    
+//     for(let i=0; i<vetor.length;i++){
+//         vetor[i] = vetorLetras[Math.floor(Math.random() *(max-min + 1)+min)]; 
+//     }
+            
+//     return vetor;
+// }
+
+// const gabarito = geraVetorResposta(max,min, letras);
+// console.log('O  gabarito é: ');
+// console.log(gabarito);
+
+// const alunos =new Array(50).fill(0);
+
+// function geraAlunos(max,min, alunos, vetorLetras){
+//     for(let i=0; i<50;i++){
+//         let aluno = new Array(2).fill(0);
+//         let respostas = new Array(20).fill(0);
+//         aluno[0] = i+1;
+//         aluno[1] = respostas;
+        
+//         for(let j=0; j<20;j++){
+            
+//             aluno[1][j] = vetorLetras[Math.floor(Math.random() *(max-min + 1)+min)];
+
+//         }
+
+//         alunos[i] = aluno;
+//     }
+
+//     return alunos;
+    
+// }
+
+// console.log('A lista de alunos: ')
+// const listaDeAlunos = geraAlunos(max, min, alunos, letras);
+// listaDeAlunos.forEach(element => {
+//     console.log(element);
+// });
+
+// function verificaAcertos(gabarito, listaAlunos){
+//     for(let aluno of listaAlunos ){
+//         let acertos = 0;
+//         for(let i=0; i<gabarito.length;i++){
+//             if(aluno[1][i]==gabarito[i]){
+//                 acertos++;
+//             }
+//         }
+
+        
+
+//         if(acertos >= 12){
+//             console.log(`O aluno ${aluno[0]} acertou ${acertos} perguntas. APROVADO!`);
+//         }else{
+//             console.log(`O aluno ${aluno[0]} acertou ${acertos} perguntas. REPROVADO!`);
+//         }
+
+//     }
+// }
+
+// verificaAcertos(gabarito, listaDeAlunos);
+
+
+//Exercicio 38
+
+//CASO QUEIRA CONSTRUIR SEU PRÓPRIO VETOR- DESCOMENTE AS LINHAS ABAIXO
+
+// const vetor = new Array(6).fill(0);
+
+// for(let elemento of vetor){
+//     elemento = parseInt(prompt('Digite um elemento para o vetor: '));
+// }
+
+// let identificador = parseInt(prompt('Escolha uma operação:\n1-soma dos elementos\n2-produto dos elementos\n3-média dos elementos\n4-ordene os elementos\n5-mostre o valor'));
+
+//CASO NÃO QUEIRA CONSTRUIR SEU PRÓPRIO VETOR- DESCOMENTE AS LINHAS ABAIXO
+// const  array = [6,5,4,3,2,1];
+// selecionaOperacao(1, array);
+// selecionaOperacao(2, array);
+// selecionaOperacao(3, array);
+// selecionaOperacao(4, array);
+// selecionaOperacao(5, array);
+
+//AQUI COMEÇA O CODIGO
+// function somaElementos(array){
+//     let soma=0;
+//     for(let elemento of array){
+//         soma += elemento;
+//     }
+//     return soma;
+// }
+
+// function produtoDosElementos(array){
+//     let produto=1;
+
+//     for(let elemento of array){
+//         produto *= elemento;
+//     }
+//     return produto;
+// }
+
+// function mediaDosElementos(array){
+//     let soma=0;
+//     for(let elemento of array){
+//         soma += elemento;
+//     }
+//     return soma/array.length;
+// }
+
+// function ordemCrescente(array){
+//     return array.sort((a,b) => a-b)
+// }
+
+// function selecionaOperacao(identificador, vetor){
+//     switch (identificador){
+//         case 1:
+//             console.log(`A soma dos elementos é: ${somaElementos(vetor)}`);
+//             break;
+//         case 2:
+//             console.log(`O produto dos elementos é: ${produtoDosElementos(vetor)}`); 
+//             break;
+//         case 3:
+//             console.log(`A média dos elementos é: ${mediaDosElementos(vetor)}`);
+//             break;
+//         case 4:
+//             console.log(`Os elementos ordenados: ${ordemCrescente(vetor)}`);
+//             break;
+//         case 5:
+//             console.log(`O vetor é: ${vetor}`);
+//             break;
+//     }
+        
+
+// }
+
+
+//Exercicio 39
+
+// const max = 5;
+// const min = -5; 
+
+// const vetor = new Array(100).fill(0);
+
+// for(let i=0; i<vetor.length;i++){
+//     vetor[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+// }
+
+// console.log(`O vetor original:\n[${vetor}]`);
+
+// console.log(`O vetor sem nulos e  negativos:\n[${vetor.filter(elemento => elemento > 0)}]`);
+
+//Exercicio 40
+
+// const max = 99;
+// const min = 1;
+
+// function geraVetorResposta(max, min){
+    
+//     let vetor = new Array(5).fill(0);
+    
+//     for(let i=0; i<vetor.length;i++){
+//         vetor[i] = Math.floor(Math.random() *(max-min + 1)+min); 
+//     }
+            
+//     return vetor;
+// }
+
+// const resultado = geraVetorResposta(max,min);
+// console.log('O  resulstado oficial é: ');
+// console.log(resultado);
+
+// const apostadores =new Array(50).fill(0);
+
+// function geraApostadores(max,min, apostadores){
+//     for(let i=0; i<50;i++){
+//         let apostador = new Array(5).fill(0);
+        
+//         for(let j=0; j<5;j++){
+            
+//             apostador[j] = Math.floor(Math.random() *(max-min + 1)+min);
+
+//         }
+
+//         apostadores[i] = apostador;
+//     }
+
+//     return apostadores;
+    
+// }
+
+// console.log('A lista de apostadores: ')
+// const listaDeApostadores = geraApostadores(max, min, apostadores);
+// listaDeApostadores.forEach(element => {
+//     console.log(element);
+// });
+
+// function verificaAcertos(resultado, listaApostadores){
+//     let apostadorCont = 1;
+//     for(let apostador of listaApostadores ){
+//         let acertos = 0;
+//         for(let i=0; i<resultado.length;i++){
+//             if(apostador[i]==resultado[i]){
+//                 acertos++;
+//             }
+//         }
+
+        
+
+//         if(acertos == 5){
+//             console.log(`O Apostador ${apostadorCont} acertou ${acertos} numeros. Parabéns Ganhador!`);
+//         }else{
+//             console.log(`O apostador ${apostadorCont}  acertou ${acertos} perguntas. Tente novamente!`);
+//         }
+//         apostadorCont++;
+
+//     }
+// }
+
+// verificaAcertos(resultado, listaDeApostadores);
 
 
 
