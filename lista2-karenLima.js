@@ -1288,7 +1288,7 @@ const prompt = require('prompt-sync')();
 // }
 
 // const resultado = geraVetorResposta(max,min);
-// console.log('O  resulstado oficial é: ');
+// console.log('O  resultado oficial é: ');
 // console.log(resultado);
 
 // const apostadores =new Array(50).fill(0);
@@ -1342,9 +1342,89 @@ const prompt = require('prompt-sync')();
 
 
 
+//Exercicio 41
+
+// let pessoa = {
+//     nome:'Ana Souza',
+//     idade: '18'
+// }
+
+// console.log(pessoa.idade);
+
+// pessoa.email = 'ana@teste.com';
+
+// console.log(pessoa);
 
 
+//Exercicio 42
 
+// let dados = {
+//     nome: 'Ana Souza',
+//     idade: 18,
+//     formada: true,
+//     faculdade:'PUC-Minas',
+//     linguagensQueSabe: ['Java', 'Javascript', 'Python'],
+//     linguagensAprendendo: ['C#', 'Ruby'],
+//     frameworks: ['Spring', 'Angular', 'React'],
+//     acertosNoTeste: 38
+// }
+
+// function achaArray(objeto){
+//     novoObjeto = {}
+//     for(let prop in objeto){
+//         if(Array.isArray(objeto[prop])){
+//             novoObjeto[prop] = objeto[prop];
+//         }
+//     }
+
+//     return novoObjeto;
+// }
+
+// let dadosArrays = achaArray(dados);
+// console.log(dadosArrays);
+
+
+//exercicio 43
+
+// let gabarito1 = {1:'A', 2:'C', 3:'B', 4:'E', 5:'A'}
+// let gabarito2 = {1:'C', 3:'E', 6:'B', 7:'E', 8:'A', 9:'A', 10:'B'}
+
+// function mergeObjetos(obj1, obj2){
+//     return {...obj1, ...obj2};
+// }
+
+// let juntcaoObjetos = mergeObjetos(gabarito1,gabarito2);
+// console.log(juntcaoObjetos);
+
+
+//Exercicio 44
+
+// let dados = {
+//     nome: 'Ana Souza',
+//     idade: 18,
+//     formada: true,
+//     faculdade:'PUC-Minas',
+//     curso: 'Engenharia de Software',
+//     linguagensQueSabe: ['Java', 'Javascript', 'Python'],
+//     linguagensAprendendo: ['C#', 'Ruby'],
+//     frameworks: ['Spring', 'Angular', 'React'],
+//     acertosNoTeste: 38
+// }
+
+// // console.log(typeof dados['nome'])
+
+// function contaString(objeto){
+//     let contador =0;
+//     for(let prop in objeto){
+//         if(typeof objeto[prop] == 'string'){
+//             contador++;
+//         }
+//     }
+
+//     return contador;
+// }
+
+// console.log(contaString(dados));
 
 
 
