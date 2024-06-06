@@ -1411,8 +1411,6 @@ const prompt = require('prompt-sync')();
 //     acertosNoTeste: 38
 // }
 
-// // console.log(typeof dados['nome'])
-
 // function contaString(objeto){
 //     let contador =0;
 //     for(let prop in objeto){
@@ -1427,6 +1425,84 @@ const prompt = require('prompt-sync')();
 // console.log(contaString(dados));
 
 
+//Exercicio 45
+
+// const array = ['Java', 'Javascript', 'Python', 'C#', 'Java', 'C#', 'C#', 'Javascript', 'Ruby', 'Go','Python', 'Go', 'Ruby', 'C#', 'Java', 'Javascript', 'Go', 'Java'];
+
+// let contagemElemento ={}
+
+// array.forEach(valor => {
+//     if(contagemElemento[valor]){
+//         contagemElemento[valor]++;
+//     }else{
+//         contagemElemento[valor] = 1;
+//     }
+// });
+
+// console.log(contagemElemento);
+
+
+
+//Exercicio 46
+
+// let vendas = [
+//     {'vendedor': 'Jose Carneiro', 'valor': 400.0},
+//     {'vendedor': 'Jose Carneiro', 'valor': 150.0},
+//     {'vendedor': 'Ana Souza', 'valor': 200.0},
+//     {'vendedor': 'Maria Paula', 'valor': 500.0},
+//     {'vendedor': 'Ana Souza', 'valor': 300.0},
+//     {'vendedor': 'Jose Carneiro', 'valor': 320.0},
+//     {'vendedor': 'Maria Paula', 'valor': 300.0},
+//     {'vendedor': 'Ana Souza', 'valor': 300.0}
+// ];
+
+// function resumoVendas(array){
+
+//     let resumo = {};
+
+//     for(let venda of vendas){
+//         if(resumo[venda.vendedor]){
+//             resumo[venda.vendedor]+= venda.valor;
+//         }else{
+//             resumo[venda.vendedor] = venda.valor;
+//         }
+//     }
+
+//     for(let vendedor in resumo){
+//         console.log(`O  vendedor(a) ${vendedor} vendeu R$ ${resumo[vendedor]} reais no total`)
+//     }
+// }
+
+// resumoVendas(vendas);
+
+
+
+//exercicio 47
+
+// let compras = {
+//     'Ana':540.0,
+//     'Maria': 1320.0,
+//     'Gustavo': 454.50,
+//     'Renato': 520.0,
+//     'Teresa': 542.0,
+//     'Marcos': 1000.0
+// }
+
+// function desconto(valor){
+//     return valor - (valor*0.10);
+// }
+
+// function comprasComDesconto(objeto){
+//     let resultados = {}
+    
+//     for(let propriedade in objeto){
+//         resultados[propriedade] = desconto(objeto[propriedade]);
+//     }
+
+//     return resultados;
+// }
+
+// console.log(comprasComDesconto(compras));
 
 
 
