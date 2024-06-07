@@ -26,4 +26,5 @@ npm start
 ```
 ## Listas de Exercício
 Para rodar os exercícios da lista basta descomentar o exercício e rodar o código através da extensão do code run ou digitando "node listaX-karenLima" no terminal.
-- Lista 1: Está nomeada como lista1-karenLima
+- Lista 1: Está nomeada como lista1-karenLima.js
+- Lista 2: Está nomeada como lista2-karenLima.js
