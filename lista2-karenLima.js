@@ -1506,5 +1506,233 @@ const prompt = require('prompt-sync')();
 
 
 
+//Exercico 48
+
+// let inventarioLojaA = {
+//     'regata': 24,
+//     'calca': 32,
+//     'tenis':47,
+//     'vestido_estampado': 102,
+//     'vestido_liso': 200,
+// }
+
+// let inventarioLojaB = {
+//     'bota':27,
+//     'casaco':44,
+//     'calca':32,
+//     'bolsa':44,
+//     'chapeu':27,
+//     'vestido_liso': 50
+// }
+
+// function combinaInventarios(inventarioA, inventarioB){
+//     let inventarioFinal = {}
+//     for(let item in inventarioA){
+//         if(inventarioFinal[item]){
+//             inventarioFinal[item] += inventarioA[item];
+//         }else{
+//             inventarioFinal[item] = inventarioA[item];
+//         }
+//     }
+
+//     for(let item in inventarioB){
+//         if(inventarioFinal[item]){
+//             inventarioFinal[item] += inventarioB[item];
+//         }else{
+//             inventarioFinal[item] = inventarioB[item];
+//         }
+//     }
+
+//     return inventarioFinal;
+// }
+
+// console.log(combinaInventarios(inventarioLojaA,inventarioLojaB));
 
 
+
+//Exercicio 49
+
+// const transacoes =[
+//     {'id':1, 'valor': 340.0, 'data': '22-04-2024', 'categoria': 'Pix'},
+//     {'id':2, 'valor': 100.0, 'data': '27-04-2024', 'categoria': 'Saque'},
+//     {'id':3, 'valor': 50.0, 'data': '04-05-2024', 'categoria': 'Saque'},
+//     {'id':4, 'valor': 590.0, 'data': '17-05-2024', 'categoria': 'Deposito'},
+//     {'id':5, 'valor': 17.0, 'data': '22-05-2024', 'categoria': 'Pix'},
+//     {'id':6, 'valor': 150.0, 'data': '30-05-2024', 'categoria': 'Saque'},
+//     {'id':7, 'valor': 300.0, 'data': '02-06-2024', 'categoria': 'Deposito'},
+//     {'id':8, 'valor': 1000.0, 'data': '14-06-2024', 'categoria': 'Saque'},
+//     {'id':9, 'valor': 220.0, 'data': '20-06-2024', 'categoria': 'Deposito'},
+//     {'id':10, 'valor': 10.0, 'data': '28-06-2024', 'categoria': 'Pix'},
+// ];
+
+// function agruparTransaçõesPorCategoria(transacoes){
+//     let categorizacao ={}
+
+//     for(let transacao of transacoes){
+//         const categoria = transacao.categoria;
+//         const valor = transacao.valor;
+
+//         if(categorizacao[categoria]){
+//             categorizacao[categoria].transacoes.push(transacao);
+//             categorizacao[categoria].subtotal += valor;
+//         }else{
+//             categorizacao[categoria] = {
+//                 'transacoes': [transacao],
+//                 'subtotal': valor
+//             }
+//         }
+//     }
+
+//     return categorizacao;
+// }
+
+// const resultado = agruparTransaçõesPorCategoria(transacoes);
+// console.log(JSON.stringify(resultado, null, 2));
+
+
+//Exercicio 50
+
+// function achaId(lista){
+//     let id = 0;
+//     if(lista.length == 0){
+//         id = 1;
+//     }else{
+//         id = lista[lista.length -1].id + 1;
+//         }
+
+//     return id;
+// }
+
+// function adicionarHoteis(listaDeHoteis){
+//     let continuar = 1;
+//     while(continuar !== 0){
+//         let hotel ={};
+//         let nome = prompt('Insira um nome para o hotel: ');
+//         let cidade = prompt('Insira a cidade do hotel: ');
+//         let quartostotais = parseInt(prompt('Digite a quantidade total de quartos: '));
+//         let quartosDisponiveis = parseInt(prompt('Insira a quantidade de quartos disponíveis: '));
+        
+//         hotel['id'] = achaId(listaDeHoteis);
+//         hotel['nome'] = nome;
+//         hotel['cidade'] = cidade;
+//         hotel['quartos_totais'] = quartostotais;
+//         hotel['quartos_disponiveis'] = quartosDisponiveis;
+//         listaDeHoteis.push(hotel);
+        
+//         continuar = parseInt(prompt('Deseja inserir outro hotel? 1-Sim 0-Não '));
+//         console.log('')
+//     }
+
+//     return listaDeHoteis;
+// }
+
+// function buscaHoteisPorCidade(listaDeHoteis, cidade){
+//     const filtrado = listaDeHoteis.filter(hotel => hotel.cidade === cidade);
+//     return filtrado;
+// }
+
+// function fazerReserva(listaDeHoteis, listaDeReservas){
+//     let reserva ={};
+
+//     let nome = prompt('Insira o seu nome: ');
+//     console.log(listaDeHoteis);
+//     let idHotel = parseInt(prompt('Digite o id do hotel que deseja fazer uma reserva: '));
+
+//     for(let hotel of listaDeHoteis){
+//         const id = hotel.id;
+//         if(id == idHotel){
+//             const quartosDisponiveis = hotel.quartos_disponiveis;
+//             if(quartosDisponiveis > 0){
+//                 hotel.quartos_disponiveis -= 1;
+//                 reserva['id'] = achaId(listaDeReservas);
+//                 reserva['idHotel'] = idHotel;
+//                 reserva['nomeCliente'] = nome;
+//                 listaDeReservas.push(reserva);
+//                 console.log('Parabéns! Sua reserva foi realizada');
+//             }else{
+//                 console.log('Não foi possível fazer sua reserva.Todos os quartos já foram reservados!')
+//             }
+//         }
+//     }
+
+//     return [listaDeHoteis, listaDeReservas];
+
+// }
+
+// function cancelarReserva(listaDeHoteis, listaDeReserva){
+//     listarReservas(listaDeReserva)
+//     let idReserva = parseInt(prompt('Insira o id da reserva que deseja cancelar: '));
+
+    
+//     let idHotelDaReserva = 0;
+    
+//     for(let reserva of listaDeReserva){
+//         if(reserva.id === idReserva){
+//             idHotelDaReserva = reserva.idHotel;
+//         }
+//     }
+            
+//     listaDeReserva = listaDeReserva.filter(reserva => reserva.id !== idReserva);
+
+//     for(let hotel of listaDeHoteis){
+//         if(hotel.id === idHotelDaReserva){
+//             hotel.quartos_disponiveis += 1;
+//         }
+//     }
+
+//     return [listaDeHoteis,listaDeReserva];
+// }
+
+// function listarReservas(listaDeReservas){
+//     console.log(JSON.stringify(listaDeReservas, null, 2));
+// }
+
+// function listarHoteis(listaDeHoteis){
+//     console.log(JSON.stringify(listaDeHoteis, null, 2));
+// }
+
+    
+// let hoteis =[];
+// let reservas = [];
+// let continuar = 1;
+    
+// while(continuar != 0){
+//     let introducao = "Escolha uma operação: \n1 -Adicionar hoteis\n2-Buscar hotéis por cidade\n3-Fazer Reserva\n4-Cancelar Reserva\n5-Listar reservas\n6-Listar hotéis"
+//     console.log(introducao);
+//     let operacao = parseInt(prompt('Escolha uma operacao: '));
+//     switch(operacao){
+//         case 1:
+//             hoteis = adicionarHoteis(hoteis);
+//             break;
+//         case 2: 
+//             let cidade = prompt('Digite a cidade: ');
+//             let filtrado = buscaHoteisPorCidade(hoteis, cidade);
+//             console.log(filtrado);
+//             break;
+//         case 3:
+//             const resultado = fazerReserva(hoteis,reservas)
+//             hoteis = resultado[0];
+//             reservas = resultado[1];
+//             break;
+//         case 4:
+//             const resultado2 = cancelarReserva(hoteis,reservas);
+//             hoteis = resultado2[0];
+//             reservas = resultado2[1];
+//             break;
+//         case 5:
+//             listarReservas(reservas);
+//             break;
+//         case 6:
+//             listarHoteis(hoteis);
+//             break;
+//         default:
+//             console.log('Operação inválida. Por favor escolher número válido!');
+//             break;
+//     }
+
+//     console.log('');
+//     continuar = parseInt(prompt('Desejar realizar outra operação?: 1-Sim 0-Não '));
+//     console.log('');
+// }
+
+// console.log('Desligando o sistema...');
