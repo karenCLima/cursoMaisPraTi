@@ -324,6 +324,8 @@ const prompt = require('prompt-sync')();
 
 // console.log(fibonacci);
 
+
+
 //Exercico 14
 
 // let nomes=[];
@@ -359,8 +361,8 @@ const prompt = require('prompt-sync')();
 
 //Exercicio 16
 
-//  const max = 0;
-//  const min = 99;
+//  const max = 99;
+//  const min = 0;
 //  let numeros =[];
 
 //  for(let i=1; i<=20;i++){
@@ -369,21 +371,7 @@ const prompt = require('prompt-sync')();
 //  }
 // console.log(`O vetor gerado é [${numeros}]`);
 
-// let numerosOrdenados=[];
-
-// for(let i=0; i<=numeros.length;i++){
-//     let elemento = numeros[i];
-   
-//     for(let j=1; j<20;j++){
-//         if(numeros[j]<elemento){
-//             elemento = numeros[j];
-//             numeros[j] = elemento;
-//              console.log(elemento);
-//         }
-//     }
-    
-//     numerosOrdenados[i] = elemento;
-// }
+// let numerosOrdenados=numeros.sort((a,b)=>a-b);
 
 // console.log(`O vetor ordenado é [${numerosOrdenados}]`);
 
@@ -430,35 +418,136 @@ const prompt = require('prompt-sync')();
 
 //Exercicio 19
 
+// function horarioEhValido(valor){
+//     const valorSeparado = valor.split(':');
+//     const horario = valorSeparado.map(Number);
+//     if(horario[0]>23 || horario[0]<0){
+//         return false;
+//     }
+//     if(horario[1]<0 || horario[1]>59){
+//         return false;
+//     }
+//     if(horario[2]<0 || horario[2]>59){
+//         return false;
+//     }
 
+//     return true;
+// }
+
+// function mudaFormato(valor){
+//     return valor.replace(/:/g, ".");
+// }
+
+// for(let i=0; i<5;i++){
+//     let horario = prompt('Insira um horario no formato HH:MM:SS : ');
+
+//     let novoFormato = mudaFormato(horario);
+
+//     if(horarioEhValido(horario)){
+//         console.log(`Esse horário ${novoFormato} é valido`);
+//     }else{
+//         console.log(`Esse horário ${novoFormato} é inválido!`);
+//     }
+    
+// }
 
 //Exercicio 20
 
-// let funcionario = {
-//     matricula: "",
-//     nome: "",
-//     salarioBruto: 0,
-//     deducaoINSS: 0,
-//     salárioLiquido: 0
-// }
-// console.log(funcionario[1]);
+// const funcionarios = [
+//     { matricula: 1, nome: "João Silva", salarioBruto: 3000 },
+//     { matricula: 2, nome: "Maria Oliveira", salarioBruto: 3500 },
+//     { matricula: 3, nome: "Pedro Souza", salarioBruto: 4000 },
+//     { matricula: 4, nome: "Ana Santos", salarioBruto: 3200 },
+//     { matricula: 5, nome: "Carlos Pereira", salarioBruto: 3700 },
+//     { matricula: 6, nome: "Mariana Almeida", salarioBruto: 4100 },
+//     { matricula: 7, nome: "Fernanda Costa", salarioBruto: 3300 },
+//     { matricula: 8, nome: "Ricardo Lima", salarioBruto: 3800 },
+//     { matricula: 9, nome: "Juliana Araujo", salarioBruto: 4200 },
+//     { matricula: 10, nome: "Lucas Fernandes", salarioBruto: 3400 },
+//     { matricula: 11, nome: "Beatriz Cardoso", salarioBruto: 3900 },
+//     { matricula: 12, nome: "Gabriel Ribeiro", salarioBruto: 4300 },
+//     { matricula: 13, nome: "Paula Barros", salarioBruto: 3500 },
+//     { matricula: 14, nome: "Rafael Teixeira", salarioBruto: 4000 },
+//     { matricula: 15, nome: "Aline Ferreira", salarioBruto: 4400 },
+//     { matricula: 16, nome: "Thiago Martins", salarioBruto: 3600 },
+//     { matricula: 17, nome: "Larissa Pinto", salarioBruto: 4100 },
+//     { matricula: 18, nome: "Felipe Mendes", salarioBruto: 4500 },
+//     { matricula: 19, nome: "Camila Rocha", salarioBruto: 3700 },
+//     { matricula: 20, nome: "Gustavo Vieira", salarioBruto: 4200 },
+//     { matricula: 21, nome: "Renata Gomes", salarioBruto: 4600 },
+//     { matricula: 22, nome: "Daniel Monteiro", salarioBruto: 3800 },
+//     { matricula: 23, nome: "Patrícia Santos", salarioBruto: 4300 },
+//     { matricula: 24, nome: "Leonardo Nunes", salarioBruto: 4700 },
+//     { matricula: 25, nome: "Isabela Silva", salarioBruto: 3900 },
+//     { matricula: 26, nome: "Rodrigo Almeida", salarioBruto: 4400 },
+//     { matricula: 27, nome: "Eduarda Carvalho", salarioBruto: 4800 },
+//     { matricula: 28, nome: "André Costa", salarioBruto: 4000 },
+//     { matricula: 29, nome: "Bruna Lopes", salarioBruto: 4500 },
+//     { matricula: 30, nome: "Marcelo Sousa", salarioBruto: 4900 },
+//     { matricula: 31, nome: "Jéssica Pereira", salarioBruto: 4100 },
+//     { matricula: 32, nome: "Matheus Lima", salarioBruto: 4600 },
+//     { matricula: 33, nome: "Vanessa Oliveira", salarioBruto: 5000 },
+//     { matricula: 34, nome: "Victor Fernandes", salarioBruto: 4200 },
+//     { matricula: 35, nome: "Adriana Barbosa", salarioBruto: 4700 },
+//     { matricula: 36, nome: "Renato Souza", salarioBruto: 5100 },
+//     { matricula: 37, nome: "Cristiane Ribeiro", salarioBruto: 4300 },
+//     { matricula: 38, nome: "Vinícius Costa", salarioBruto: 4800 },
+//     { matricula: 39, nome: "Sabrina Almeida", salarioBruto: 5200 },
+//     { matricula: 40, nome: "Alexandre Lima", salarioBruto: 4400 },
+//     { matricula: 41, nome: "Letícia Santos", salarioBruto: 4900 },
+//     { matricula: 42, nome: "Fábio Pereira", salarioBruto: 5300 },
+//     { matricula: 43, nome: "Thaís Silva", salarioBruto: 4500 },
+//     { matricula: 44, nome: "Marcos Oliveira", salarioBruto: 5000 },
+//     { matricula: 45, nome: "Bianca Souza", salarioBruto: 5400 },
+//     { matricula: 46, nome: "Diego Almeida", salarioBruto: 4600 },
+//     { matricula: 47, nome: "Carolina Cardoso", salarioBruto: 5100 },
+//     { matricula: 48, nome: "Bruno Costa", salarioBruto: 5500 },
+//     { matricula: 49, nome: "Lívia Ribeiro", salarioBruto: 4700 },
+//     { matricula: 50, nome: "Antonio Santos", salarioBruto: 5200 },
+//     { matricula: 51, nome: "Juliana Oliveira", salarioBruto: 5600 },
+//     { matricula: 52, nome: "Samuel Souza", salarioBruto: 4800 },
+//     { matricula: 53, nome: "Luana Almeida", salarioBruto: 5300 },
+//     { matricula: 54, nome: "Rogério Costa", salarioBruto: 5700 },
+//     { matricula: 55, nome: "Natália Pereira", salarioBruto: 4900 },
+//     { matricula: 56, nome: "Paulo Silva", salarioBruto: 5400 },
+//     { matricula: 57, nome: "Melissa Oliveira", salarioBruto: 5800 },
+//     { matricula: 58, nome: "Mário Souza", salarioBruto: 5000 },
+//     { matricula: 59, nome: "Débora Almeida", salarioBruto: 5500 },
+//     { matricula: 60, nome: "Renato Costa", salarioBruto: 5900 },
+//     { matricula: 61, nome: "Amanda Ribeiro", salarioBruto: 5100 },
+//     { matricula: 62, nome: "Fernando Santos", salarioBruto: 5600 },
+//     { matricula: 63, nome: "Viviane Oliveira", salarioBruto: 6000 },
+//     { matricula: 64, nome: "Gustavo Souza", salarioBruto: 5200 },
+//     { matricula: 65, nome: "Priscila Almeida", salarioBruto: 5700 },
+//     { matricula: 66, nome: "Eduardo Costa", salarioBruto: 6100 },
+//     { matricula: 67, nome: "Eliane Pereira", salarioBruto: 5300 },
+//     { matricula: 68, nome: "Marcelo Silva", salarioBruto: 5800 },
+//     { matricula: 69, nome: "Tatiana Oliveira", salarioBruto: 6200 },
+//     { matricula: 70, nome: "Roberto Souza", salarioBruto: 5400 },
+//     { matricula: 71, nome: "Carla Almeida", salarioBruto: 5900 },
+//     { matricula: 72, nome: "Sérgio Costa", salarioBruto: 6300 },
+//     { matricula: 73, nome: "Lúcia Ribeiro", salarioBruto: 5500 },
+//     { matricula: 74, nome: "Rafael Santos", salarioBruto: 6000 },
+//     { matricula: 75, nome: "Patrícia Oliveira", salarioBruto: 6400 },
+//     { matricula: 76, nome: "Fábio Souza", salarioBruto: 5600 },
+//     { matricula: 77, nome: "Mônica Almeida", salarioBruto: 6100 },
+//     { matricula: 78, nome: "Jorge Costa", salarioBruto: 6500 },
+//     { matricula: 79, nome: "Cláudia Pereira", salarioBruto: 5700 },
+//     { matricula: 80, nome: "Alex Silva", salarioBruto: 6200 }
+// ];
 
-// for(let campo in funcionario){
-//     if(campo.valueOf()==""){
-//         let valor = prompt(`Insira ${campo} do funcionário: `);
-//         campo = valor;
-//     }else if(campo.localeCompare("salarioBruto")){
-//         let valor = parseFloat(prompt(`Insira ${campo} do funcinario: `));
-//         campo = valor;
-//     }else if(campo.localeCompare("deducaoINSS")){
-//         campo = funcionario.salarioBruto * 0.12;
-//     }else{
-//         campo = funcionario.salarioBruto - funcionario.deducaoINSS;
-//     }
+// for(let funcionario of funcionarios){
+//     console.log(`Matrícula: ${funcionario.matricula}`);
+//     console.log(`Nome: ${funcionario.nome}`);
+//     console.log(`Salário bruto: R$ ${funcionario.salarioBruto.toFixed(2)}`);
+//     const deducaoINSS = funcionario.salarioBruto * 0.12;
+//     console.log(`Dedução INSS: R$ ${deducaoINSS.toFixed(2)}`);
+//     const salarioLiquido = funcionario.salarioBruto - deducaoINSS;
+//     console.log(`Salário líquido: R$ ${salarioLiquido.toFixed(2)}`);
+//     console.log('----------------------------');
        
 // }
 
-// console.log(funcionario);
 
 
 //Exercicio 21
