@@ -1,7 +1,5 @@
 const prompt = require('prompt-sync')();
 
-//Refazer: 16,19,20
-
 //Exercício 1
 // let quantidadeCigarrosPorDia = parseFloat(prompt('Insira quantos cigarros você fuma por dia: '));
 // let anosFumando = parseFloat(prompt('Insira quantos anos você já fumou: '));
