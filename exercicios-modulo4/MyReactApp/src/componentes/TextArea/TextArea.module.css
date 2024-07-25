@@ -1,0 +1,19 @@
+
+.input{
+    margin:0 10px 10px 10px;
+    width:220px;
+    height:100px;
+    border:2px solid lightskyblue;
+    font-size: 24px;
+}
+
+.texto{
+    margin:10px 10px 10px 10px;
+    text-transform: uppercase;
+}
+
+.texto_repeticao{
+    margin:0 10px 30px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+}

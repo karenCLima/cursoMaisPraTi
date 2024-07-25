@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './componentes/Header'
+import TextArea from './componentes/TextArea'
+import TaskList from './componentes/TaskList'
+import NavPage from './componentes/NavPage'
 
 function App() {
   
@@ -11,7 +11,11 @@ function App() {
     <>
       <Header/>
       <div>
-        <p>Olá mundo</p>
+        <TextArea/>
+        <TaskList/>
+      </div>
+      <div>
+        <NavPage/>
       </div>
     </>
   )
