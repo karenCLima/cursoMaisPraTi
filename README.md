@@ -29,4 +29,5 @@ Para rodar os exercícios da lista basta descomentar o exercício e rodar o cód
 - Lista 1: Está nomeada como lista1-karenLima.js
 - Lista 2: Está nomeada como lista2-karenLima.js
 - Exercício Header com React: está na pasta exercicios-modulo4/MyReactApp/src/componentes/Header
-- Exercícios da aula 35: está na pasta exercicios-modulo4/MyReactApp/src/componentes/TextArea , está na pasta exercicios-modulo4/MyReactApp/src/componentes/TaskList e está na pasta exercicios-modulo4/MyReactApp/src/componentes/NavPage
+- Exercícios da aula 35: está na pasta exercicios-modulo4/MyReactApp/src/componentes/TextArea , está na pasta exercicios-modulo4/MyReactApp/src/componentes/TaskList e  na pasta exercicios-modulo4/MyReactApp/src/componentes/NavPage
+- Exercício da aula 37: está na pasta exercicios-modulo4/desafio_aula37/desafio_aula37/News
