@@ -1,0 +1,9 @@
+.erro{
+    display:none;
+    color:red;
+}
+
+#valid{
+    color: greenyellow;
+    display: none;
+}
