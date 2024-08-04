@@ -24,10 +24,17 @@ Isso instalará todas as dependências listadas no arquivo package.json.
 ```bash
 npm start
 ```
+4. ***Projetos React***: Caso o projeto seja em  React navegue até o diretório e execute os seguintes comandos:
+```bash
+cd repo
+npm install
+npm run dev
+```
 ## Listas de Exercício
 Para rodar os exercícios da lista basta descomentar o exercício e rodar o código através da extensão do code run ou digitando "node listaX-karenLima" no terminal.
 - Lista 1: Está nomeada como lista1-karenLima.js
 - Lista 2: Está nomeada como lista2-karenLima.js
 - Exercício Header com React: está na pasta exercicios-modulo4/MyReactApp/src/componentes/Header
 - Exercícios da aula 35: está na pasta exercicios-modulo4/MyReactApp/src/componentes/TextArea , está na pasta exercicios-modulo4/MyReactApp/src/componentes/TaskList e  na pasta exercicios-modulo4/MyReactApp/src/componentes/NavPage
-- Exercício da aula 37: está na pasta exercicios-modulo4/desafio_aula37/desafio_aula37/News
+- Exercício da aula 37: está na pasta exercicios-modulo4/desafio_aula37/desafio_aula37/src/components/News
+- Exercício da aula 38: está na pasta exercicios-modulo4/aula38_forms/src/components/Form2
