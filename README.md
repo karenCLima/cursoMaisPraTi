@@ -38,3 +38,4 @@ Para rodar os exercícios da lista basta descomentar o exercício e rodar o cód
 - Exercícios da aula 35: está na pasta exercicios-modulo4/MyReactApp/src/componentes/TextArea , está na pasta exercicios-modulo4/MyReactApp/src/componentes/TaskList e  na pasta exercicios-modulo4/MyReactApp/src/componentes/NavPage
 - Exercício da aula 37: está na pasta exercicios-modulo4/desafio_aula37/desafio_aula37/src/components/News
 - Exercício da aula 38: está na pasta exercicios-modulo4/aula38_forms/src/components/Form2
+- Exercício da aula 39: está na pasta exercicios-modulo4/aula39_context/src/components/LanguageChoice, exercicios-modulo4/aula39_context/src/components/ThemeChoice e exercicios-modulo4/aula39_context/src/context/ConfigContext.jsx
