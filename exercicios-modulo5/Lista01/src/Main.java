@@ -174,18 +174,18 @@ public class Main {
 		
 		//Exercício 08
 		
-		ProcessManager manager = new ProcessManager();
-		
-		manager.getInQueue("Execution 1");
-		manager.getInQueue("Execution 2");
-		manager.getInQueue("Execution 3");
-		manager.getInQueue("Execution 4");
-		
-		System.out.println(manager.callNext());
-		System.out.println(manager.callNext());
-		System.out.println(manager.callNext());
-		System.out.println(manager.callNext());
-		System.out.println(manager.callNext());
+//		ProcessManager manager = new ProcessManager();
+//		
+//		manager.getInQueue("Execution 1");
+//		manager.getInQueue("Execution 2");
+//		manager.getInQueue("Execution 3");
+//		manager.getInQueue("Execution 4");
+//		
+//		System.out.println(manager.callNext());
+//		System.out.println(manager.callNext());
+//		System.out.println(manager.callNext());
+//		System.out.println(manager.callNext());
+//		System.out.println(manager.callNext());
 
 
 	}
